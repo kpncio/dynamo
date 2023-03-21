@@ -1,5 +1,8 @@
 ﻿#include "Dynamer.h"
 
+#include <curlpp/cURLpp.hpp>
+#include <curlpp/Options.hpp>
+
 using namespace std;
 
 void setConfig(string config);
@@ -80,7 +83,9 @@ void getConfig(string config) {
         string line;
 
         while (getline(cFile, line)) {
-            line.erase(remove_if(line.begin(), line.end(), isspace), line.end());
+            regex reg(" ");
+            
+            line = regex_replace(line, reg, "");
 
             if (line[0] == '#' || line.empty()) {
                 continue;
