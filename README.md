@@ -32,7 +32,7 @@ __*You only have to edit the service file when using Linux...*__
   - ExecStart: The path of your dotnet executable and Dynamer library
 
 "dynamer.service" Example:
-```
+```ini
 [Unit]
 Description=Dynamer for Cloudflare (.NET)
 After=network.target
