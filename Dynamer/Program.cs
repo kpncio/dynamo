@@ -7,18 +7,21 @@ Console.WriteLine("");
 
 bool arguments = args.Length > 0;
 
-try
+if (arguments)
 {
-    Globals.Email = args[0];
-    Globals.ApiKey = args[1];
-    Globals.Domain = args[2];
-    Globals.IPv4 = Convert.ToBoolean(args[3]);
-    Globals.Rate = Convert.ToInt32(args[4]);
-}
-catch
-{
-    Console.WriteLine("[ERROR]: Invalid argument array, check the project...");
-    Console.WriteLine("[INFO]: Args: <Email(string)> <ApiKey(string)> <Domain(string)> <IPv4(boolean)> <Rate(integer)>...");
+    try
+    {
+        Globals.Email = args[0];
+        Globals.ApiKey = args[1];
+        Globals.Domain = args[2];
+        Globals.IPv4 = Convert.ToBoolean(args[3]);
+        Globals.Rate = Convert.ToInt32(args[4]);
+    }
+    catch
+    {
+        Console.WriteLine("[ERROR]: Invalid argument array, check the project...");
+        Console.WriteLine("[INFO]: Args: <Email(string)> <ApiKey(string)> <Domain(string)> <IPv4(boolean)> <Rate(integer)>...");
+    }
 }
 
 if (File.Exists("Config.json"))
