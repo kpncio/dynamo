@@ -1,8 +1,8 @@
-﻿using Dynamer;
+﻿using Dynamo;
 
-Console.WriteLine("  /////////////////////////////////");
-Console.WriteLine(" /// Welcome, to KPNC Dynamer! ///");
-Console.WriteLine("/////////////////////////////////");
+Console.WriteLine("  ////////////////////////////////");
+Console.WriteLine(" /// Welcome, to KPNC Dynamo! ///");
+Console.WriteLine("////////////////////////////////");
 Console.WriteLine("");
 
 bool arguments = args.Length > 0;

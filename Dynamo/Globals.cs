@@ -3,7 +3,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Dynamer
+namespace Dynamo
 {
     public class Json
     {

@@ -1,13 +1,13 @@
 [Unit]
-Description=Dynamer for Cloudflare (.NET)
+Description=Dynamo for Cloudflare (.NET)
 After=network.target
 
 [Service]
-User=albie
+User=ubuntu
 TimeoutStartSec=0
 KillMode=process
-WorkingDirectory=/home/albie/dynamer/
-ExecStart=/usr/bin/dotnet /home/albie/dynamer/Dynamer.dll
+WorkingDirectory=/home/ubuntu/dynamo/
+ExecStart=/usr/bin/dotnet /home/ubuntu/dynamo/Dynamo.dll
 Restart=always
 RestartSec=10
 Environment=Production

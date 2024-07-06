@@ -1,7 +1,7 @@
 ﻿using RestSharp;
 using Newtonsoft.Json.Linq;
 
-namespace Dynamer
+namespace Dynamo
 {
     internal class Worker
     {
@@ -100,7 +100,7 @@ namespace Dynamer
             catch (Exception ex)
             {
                 Console.WriteLine("[ERROR]: Could not get record...");
-                Console.WriteLine("[INFO]: Please preload a matching record in your Cloudflare dashboard, so that Dynamer can copy and patch existing settings...");
+                Console.WriteLine("[INFO]: Please preload a matching record in your Cloudflare dashboard, so that Dynamo can copy and patch existing settings...");
                 Console.WriteLine(ex.ToString());
             }
 
@@ -113,7 +113,7 @@ namespace Dynamer
                 request.AddHeader("X-Auth-Email", Globals.Email!);
                 request.AddHeader("X-Auth-Key", Globals.ApiKey!);
                 request.RequestFormat = DataFormat.Json;
-                request.AddJsonBody(new { name = Globals.Domain, content, type, comment = "Set by KPNC Dynamer...", proxied, ttl });
+                request.AddJsonBody(new { name = Globals.Domain, content, type, comment = "Set by KPNC Dynamo...", proxied, ttl });
                 response = client.Execute(request);
 
                 token = JObject.Parse(response.Content!);
